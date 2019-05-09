@@ -1,0 +1,14 @@
+{
+	"name": "tc5550-mazeshooter",
+	"version": "1.0.0",
+	"description": "Laser shooter io game",
+	"author": "Alfons Nilsson",
+	"license": "MIT",
+	"dependencies": {
+		"node": "8.9.x",
+		"websocket": "^1.0.28"
+	},
+	"scripts": {
+		"start": "node server.js"
+	}
+}
