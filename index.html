@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chnage this</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
+    <style>
+
+        :root {
+            font-family: sans-serif;
+        }
+    
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background: rgb(20, 20, 20);
+        }
+
+        .menuUI {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 10;
+            color: white;
+        }
+
+        .menuUI .title {
+            color: white;
+            font-size: 75px;
+            margin-bottom: 50px;
+        }
+
+        .menuUI input[type=text] {
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.7);
+            background: none;
+            border-radius: 15px;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .menuUI input[type=text]:focus {
+            outline: none;
+        }
+
+        .menuUI button {
+            width: 150px;
+            height: 75px;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 15px;
+        }
+
+        .menuUI input[type=radio] {
+            width: 150px;
+            height: 150px;
+            /*background: rgba(255, 255, 255, 0.7);*/
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+
+        .menuUI .class:nth-child(1) > input[type=radio] {background: url("./images/auto.png");}
+        .menuUI .class:nth-child(2) > input[type=radio] {background: url("./images/sniper.png");}
+        .menuUI .class:nth-child(3) > input[type=radio] {background: url("./images/shotgun.png");}
+
+        .menuUI input[type=radio]:checked {
+            border: 5px solid white;
+        }
+
+        .menuUI input[type=radio]:focus {
+            outline: 0;
+        }
+        
+        .classesContainer {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .class {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .class span {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="menuUI" id="menuUI">
+        <span class="title"><span style="color:red">Laser</span>Gun<span style="color:red">.</span>io</span>
+        <input type="text" id="name" placeholder="Player name"></input>
+        <button id="play" onclick="play();">Play</button>
+
+        <span style="margin-top: 75px; font-size: 20px">Select class</span>
+        <div class="classesContainer">
+            <div class="class">
+                <input id="autoSelect" type='radio' name='weapon' checked><span>Auto</span>
+            </div>
+            <div class="class">
+                <input id="sniperSelect" type='radio' name='weapon'> <span>Sniper</span>
+            </div>
+            <div class="class">
+                <input id="shotgunSelect" type='radio' name='weapon'> <span>Shotgun</span>
+            </div>
+        </div>
+
+        <span style="position:fixed;bottom:20px;left:20px">Created by <a style="color:red;" href="https://twitter.com/tc5550_2">@TC5550</a></span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="tinyPlatforms.js"></script>
+    <script src="gameCanvas.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
